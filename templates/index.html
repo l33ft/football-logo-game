@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Club Logo Game</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚽ Football Club Logo Game</h1>
+            <p class="subtitle">Can you guess the club from the blurred logo?</p>
+        </header>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="info-box">
+                <h2>How to Play</h2>
+                <ul>
+                    <li>You'll see 10 random football club logos</li>
+                    <li>Each logo starts heavily blurred</li>
+                    <li>You have 5 attempts to guess each club</li>
+                    <li>After each wrong guess, the blur decreases</li>
+                    <li>Score points based on how fast you guess!</li>
+                </ul>
+                <div class="scoring">
+                    <h3>Scoring:</h3>
+                    <p>1st attempt: 10 points | 2nd: 8 points | 3rd: 7 points</p>
+                    <p>4th attempt: 6 points | 5th: 5 points</p>
+                </div>
+            </div>
+            <button id="startButton" class="btn btn-primary">Start Game</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen hidden">
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="label">Logo:</span>
+                    <span id="logoCounter" class="value">1 / 10</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Score:</span>
+                    <span id="currentScore" class="value">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Attempts Left:</span>
+                    <span id="attemptsLeft" class="value">5</span>
+                </div>
+            </div>
+
+            <div class="logo-container">
+                <img id="logoImage" src="" alt="Club Logo" class="logo-image">
+            </div>
+
+            <div class="guess-container">
+                <input
+                    type="text"
+                    id="guessInput"
+                    placeholder="Enter club name..."
+                    autocomplete="off"
+                    maxlength="100"
+                >
+                <button id="submitGuess" class="btn btn-primary">Submit Guess</button>
+            </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+
+            <button id="nextButton" class="btn btn-secondary hidden">Next Logo →</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen hidden">
+            <h2>🎉 Game Complete!</h2>
+            <div class="final-score">
+                <span class="label">Final Score:</span>
+                <span id="finalScore" class="score-big">0</span>
+            </div>
+
+            <div id="roundsDetails" class="rounds-container"></div>
+
+            <button id="playAgainButton" class="btn btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
