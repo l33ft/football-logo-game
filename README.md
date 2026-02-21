@@ -1,8 +1,8 @@
-# ⚽ Football Club Logo Guessing Game
+# Football Club Logo Guessing Game
 
-A production-ready backend application featuring a football club logo guessing game with progressive blur mechanics. Built with clean architecture principles and best practices.
+A production-ready backend application featuring a football club logo guessing game with progressive blur mechanics. 
 
-## 🎮 Game Overview
+## Game Overview
 
 Test your football knowledge by identifying club logos through increasingly clearer images. Each game consists of 10 randomly selected logos, with 5 attempts per logo. The faster you guess correctly, the more points you earn!
 
@@ -14,7 +14,7 @@ Test your football knowledge by identifying club logos through increasingly clea
 - **5th attempt**: 5 points
 - **No correct guess**: 0 points
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend
 - **Python 3.11+**
@@ -30,7 +30,7 @@ Test your football knowledge by identifying club logos through increasingly clea
 - **Vanilla JavaScript** - Game logic and API communication
 - **Fetch API** - RESTful communication
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 football-logo-game/
@@ -60,7 +60,7 @@ football-logo-game/
 └── README.md                   # This file
 ```
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - Python 3.11 or higher
@@ -177,7 +177,7 @@ GET /api/game/result?game_id={id}
 ```
 **Response**: Complete game summary with all rounds and final score
 
-## 🏗️ Architecture Highlights
+## Architecture Highlights
 
 ### Clean Architecture
 - **Separation of Concerns**: Business logic separated from route handlers
@@ -196,7 +196,7 @@ GET /api/game/result?game_id={id}
 - ✅ Database session management
 - ✅ Clean, readable code structure
 
-## 🧪 Development
+## Development
 
 ### Adding New Clubs
 Edit `seed_data.py` and add entries to `clubs_data`:
@@ -218,7 +218,7 @@ BLUR_LEVELS = {...}       # Blur progression
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 ```
 
-## 📊 Database Schema
+## Database Schema
 
 ### Tables
 1. **clubs**: Football club information
@@ -233,4 +233,4 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 
 ---
 
-**Enjoy the game! ⚽**
+**Enjoy the game! **
