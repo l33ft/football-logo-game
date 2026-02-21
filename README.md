@@ -139,7 +139,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 The application will be available at: **http://localhost:8000**
 
-## 🎯 How to Play
+## How to Play
 
 1. **Start Game**: Click "Start Game" button
 2. **View Logo**: See a heavily blurred football club logo
@@ -150,7 +150,7 @@ The application will be available at: **http://localhost:8000**
 5. **Complete Round**: After 5 attempts or correct guess, move to next logo
 6. **Finish Game**: Complete all 10 logos to see your final score
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Start New Game
 ```http
