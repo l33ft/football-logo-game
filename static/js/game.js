@@ -74,6 +74,9 @@ async function startNewGame() {
 
 // Load current logo
 async function loadCurrentLogo() {
+    logoImage.style.filter = 'blur(20px)';
+    logoImage.src = '';
+
     try {
         const response = await fetch(`${API_BASE}/game/current?game_id=${gameState.gameId}`);
 
@@ -83,9 +86,13 @@ async function loadCurrentLogo() {
 
         const data = await response.json();
 
-        // Update UI
+        logoImage.style.transition = 'none';
         logoImage.src = data.logo_path;
         logoImage.style.filter = `blur(${data.blur_level}px)`;
+        // Re-enable transition after image loads
+        logoImage.onload = () => {
+            logoImage.style.transition = '';
+        };
         logoCounter.textContent = `${data.logo_index} / ${data.total_logos}`;
         currentScore.textContent = data.current_score;
         attemptsLeft.textContent = data.attempts_left;
