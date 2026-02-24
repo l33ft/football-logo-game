@@ -112,7 +112,7 @@ Place football club logo images in the `static/logos/` directory. The seeding sc
 - `celtic.png`
 - `rangers.png`
 
-**Note**: You can find free logo images from sources like Wikipedia Commons or official club websites. Ensure you have proper rights to use the images.
+**Note**: You can find free logo images from sources like Wikipedia Commons or official club websites. 
 
 ### Step 5: Seed Database
 ```bash
@@ -145,8 +145,8 @@ The application will be available at: **http://localhost:8000**
 2. **View Logo**: See a heavily blurred football club logo
 3. **Make Guess**: Type the club name and submit
 4. **Get Feedback**: 
-   - ✓ Correct guess → Earn points and move to next logo
-   - ✗ Incorrect guess → Logo becomes clearer, try again
+   - Correct guess → Earn points and move to next logo
+   - Incorrect guess → Logo becomes clearer, try again
 5. **Complete Round**: After 5 attempts or correct guess, move to next logo
 6. **Finish Game**: Complete all 10 logos to see your final score
 
